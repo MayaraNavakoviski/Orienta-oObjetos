@@ -1,0 +1,8 @@
+<?php
+
+
+    for ($i=0; $i <=50 ; $i++) { 
+         if($i % 3 == 0) {
+            echo "Os números divisiveis poR 3 são: " . $i . "\n";
+         }
+    }

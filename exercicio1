@@ -1,0 +1,26 @@
+<?php
+
+
+    $num = 0;
+
+    while($num <= 10){
+        
+        $num++;
+
+        echo "Os números:  " . $num . "\n";
+    }
+
+
+
+
+    do{
+        echo "Os números são: " . $num++ . "\n";
+        
+    }while($num <= 10);
+
+
+
+     for ($i=0; $i <= 10; $i++) { 
+    echo "Os números são: " . $i . "\n";
+ }
+
