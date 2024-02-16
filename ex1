@@ -1,31 +1,21 @@
 <?php
 
-$numero = 1;
 
 
-while ($numero <= 10) {
+   $numeros = 0;
+
+
+   for ($i=0; $i <=10 ; $i++) { 
+
+      $numeros = readline ("Me informe um número: ") ;
+
+      if ($numeros < 0) {
+        echo "Esse número é negativo " . $numeros ."\n";
+
+      } else if ($numeros > 0) {
+              echo "Esse número é positivo " . $numeros . "\n";
+      }
     
 
-    echo "Os números a seguir: " . $numero . "\n" ;
-    $numero++;
 
-};
-    
-
-
-    $n = 1;
-
-
-do {
-    echo "\n " . "Os números a seguir: " . $n . "\n";
-    $n++;
-} while ($n <= 10);
-
-
-
-
-
-for ($i=1; $i <= 10; $i++) { 
-
-    echo "Os números a seguir: "  . $i . "\n";
 }

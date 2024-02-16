@@ -1,13 +1,17 @@
 <?php
 
 
-   $soma = 0;
+    $n = readline("Me informe um número: " );
 
-    for ($s=0; $s <= 100; $s++) { 
 
-        $soma = $soma + $s;
 
+    for ($i = $n - 1; $i > 0 ; $i--) { 
+        if($i == 1 ) {
+          echo $i;
+     } else {
+          echo $i . ", ";
+     }
     }
 
-
-    echo "A soma dos números de 1 a 100 é: " . "\n" . $soma . "\n";
+        
+      

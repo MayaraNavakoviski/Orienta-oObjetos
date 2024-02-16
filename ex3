@@ -1,8 +1,23 @@
 <?php
 
 
-for ($i=0; $i < 50; $i++) { 
-    if($i%3 == 0){
-          echo "Os números de 1 a 50 que são divisíveis por 3 são: " . "\n" . $i . "\n";
-    }
-}
+    $n;
+    $p;
+    $a;
+
+  
+   for ($i=0; $i <= 5 ; $i++) { 
+
+      $n = readline ("Me informe seu nome: ");
+      $p = readline ("Me informe seu peso: ");
+      $a = readline ("Me informe sua altura: ");
+
+      $imc = $p / ($a*$a);
+        
+      echo $n . " tem peso " . $p . ", altura " . $a . " e IMC. " . $imc . "\n";
+      }
+
+    
+
+    
+
