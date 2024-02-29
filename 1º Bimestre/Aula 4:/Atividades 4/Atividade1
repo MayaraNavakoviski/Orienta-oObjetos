@@ -1,0 +1,28 @@
+<?php 
+
+   
+  $vetorA = [];
+  $vetorB = [];
+  $vetorC = [];
+
+  for ($i=0; $i < 5; $i++) { 
+
+      $A = readline("Informe um número: " . "\n");
+      $vetorA[$i] = $A;
+
+  }
+
+  for ($i=0; $i < 5; $i++) { 
+
+    $B = readline("Informe um número: " . "\n");
+    $vetorB[$i] = $B;
+
+}
+
+$vetorC= array_merge($vetorA, $vetorB);
+
+
+
+
+
+  
