@@ -7,7 +7,7 @@ $pessoas = [];
    for ($i = 0; $i < 4; $i++) {
 
        $nome = readline("Informe seu Nome: " . "\n");
-       $idade = (int) readline("Informe sua Idade: " . "\n");
+       $idade = readline("Informe sua Idade: " . "\n");
        $cidade = readline("Informe sua Cidade Natal: " . "\n");
        $profissao = readline("Informe sua Profissão: " . "\n");
 
@@ -20,10 +20,7 @@ $pessoas = [];
 }
 
 
-
      $maior_idade = PHP_INT_MIN;
-     $pessoa_mais_velha = null;
-
 
      foreach ($pessoas as $pessoa) {
           if ($pessoa["idade"] > $maior_idade) {
