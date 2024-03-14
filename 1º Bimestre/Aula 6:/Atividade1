@@ -1,0 +1,84 @@
+<?php
+
+
+function CalcularF ($Vetor){
+
+    $Vetor1 = array();
+    foreach ($Vetor as $Valor) {
+        $Calcular = ($Valor*1.8)+32;
+        array_push($Vetor1, $Calcular);
+    }
+    return $Vetor1;
+
+}
+
+
+function CalcularFatorial($Vetor){
+
+    $Vetor1 = array();
+    foreach ($Vetor as $Valor) {
+        $Fatorial  = $Valor;
+            if($Valor >= 1){
+                for($i = $Valor -1; $i > 1; $i--){
+                    $Fatorial *= $i;
+                }
+            }else {
+                $Fatorial = 0;
+            }
+            array_push($Vetor1,$Fatorial);
+    }
+   return $Vetor1;
+
+}
+
+
+function CalcularX(){
+
+    $Vetor1 = array();
+    foreach ($Vetor1 as $Valor) {
+        if($Valor != 0){
+            $Valor = ($Valor*$Valor+2*$Valor)/ (2*$Valor);
+        }
+        array_push($vetor1,$Valor);
+        
+    }
+    return $Vetor1;
+
+}
+
+function Resp($Vetor, $Quant){
+    $i = 0;
+    while($i < $Quant){
+        $num = readline("\nDigite um número: ");
+        if(is_numeric($num)) {
+            $i++;
+            array_push($Vetor,$num);
+        }else{
+            print("Somente números!!!\n");
+        }
+    }
+    return $Vetor;
+}
+
+
+function MostraArray($Vetor){
+    foreach ($Vetor as $Value) {
+        print(" ".$Value.",");
+    }
+}
+$Vetor1 = Resp($vetor = array(), 5);
+
+print("\n\nFahrenheit de cada valor lido para o vetor inicial em Celsius\n");
+$Vetor2 = CalcularF($vetor1);
+MostraArray($Vetor2);
+
+print("\n\nRecebe o fatorial do número lido caso ele seja maior ou igual a 1, ou 0 caso contrário.\n");
+$Vetor3 = CalcularFatorial($Vetor1);
+MostraArray($Vetor3);
+
+print("\n\nRecebe o resultado da função: f(X) = (X² + 2X + 4) / 2X, onde X é um dos
+números lidos inicialmente.\n");
+$Vetor4 = CalcularX($Vetor1);
+MostraArray($Vetor4);
+
+print("\n");
