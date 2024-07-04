@@ -1,0 +1,53 @@
+1. Analise o código em PHP abaixo:
+---------------------------------------------------------------------------------------------------------------------
+<?php
+function calculaMedia($n1, $n2, $peso1=50, $peso2=50) {
+$val1 = $n1 * $peso1;
+$val2 = $n2 * $peso2;
+return ($val1 + $val2) / 100;
+}
+//Leitura das notas
+$nota1 = readline("Informe a nota 1: ");
+$nota2 = readline("Informe a nota 2: ");
+//Cálculo da média
+$media = calculaMedia($nota1, $nota2);
+//Imprime o resultado do aluno e a sua média
+if($media >= 9)
+echo "Aprov. com Mérito - Média: " . $media . "\n";
+else if($media < 9 && $media >= 6)
+echo "Aprovado - Média: " . $media . "\n";
+else
+echo "Reprovado - Média: " . $media . "\n";
+---------------------------------------------------------------------------------------------------------------------
+Qual será a saída do programa para as seguintes entradas:
+a)
+Informe a nota 1: 10
+Informe a nota 2: 4
+
+Aprovado - Média: 70
+
+b)
+Informe a nota 1: 7
+Informe a nota 2: 3
+
+Reprovado - Média: 50
+
+
+2. Analise o código PHP abaixo. Após isso, descreva qual será a saída do programa quando o
+mesmo for executado.
+<?php
+function imprimePessoas($dados) {
+foreach($dados as $d) {
+echo $d["nome"] . " - ";
+echo $d["idade"] . "\n";
+}
+}
+$p1 = array("nome" => "Julio", "idade" => 25);
+$p2 = array("nome" => "Maria", "idade" => 32);
+$pessoas = array($p1, $p2);
+imprimePessoas($pessoas);
+
+
+Resposta: O programa irá imprimir:
+Julio - 25
+Maria - 32
