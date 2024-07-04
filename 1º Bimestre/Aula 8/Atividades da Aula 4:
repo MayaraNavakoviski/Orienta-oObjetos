@@ -51,3 +51,35 @@ imprimePessoas($pessoas);
 Resposta: O programa irá imprimir:
 Julio - 25
 Maria - 32
+
+3. O IFPR campus Foz do Iguaçu possui diversas turmas de alunos. A fim de registrá-las, faça um
+programa em PHP que leia os dados (curso, ano e qtdAlunos) de 4 turmas, armazenando as
+informações de cada turma em um vetor associativo. Cada turma gerada deve ser adicionada em
+outro vetor, gerando assim uma matriz. Em seguida, o programa deve percorrer a matriz para somar
+(acumular) a quantidade de alunos em cada turma, imprimindo como saída o total de alunos de
+todas as turmas.
+
+<?php
+
+$turmas = array();;
+
+for ($i = 1; $i <= 4; $i++) {
+
+    $Curso = readline("Informe seu Curso: " . "\n");
+    $Ano = readline("Informe seu Ano: " . "\n");
+    $QuantAluno = readline("Informe a Quantidade de Alunos em sua sala: " . "\n");
+
+    $informacao = [
+        "Curso" => $Curso,
+        "Ano" => $Ano,
+        "QuantidadeAluno" => $QuantAluno
+    ];
+
+    array_push($turmas, $informacao);
+}
+$total = 0;
+foreach ($turmas as $info) {
+    $total = $total + $info["QuantidadeAluno"];
+}
+
+print("A soma dos alunos de todas as turmas é: " . $total . "\n");
