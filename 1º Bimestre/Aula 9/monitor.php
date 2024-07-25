@@ -1,32 +1,51 @@
 <?php
 
-class Monitor{
-    //Atributos
-    public $cor,$resolucao,$marca;
-    //Método
-    public function ligar(){
-        echo "Computador ligadooooooo";
-    } 
-    public function desligar(){
-        echo "Computador desligadooooooo";
-    }  
-    public function mostrarImagem(){
-        echo "Computador mostrando imagem ". $this->resolucao;
+
+class Monitor
+{
+
+    // Atributo //
+    public $cor;
+    public $resolucao;
+    public $marca;
+
+    // Método //
+    function ligar()
+    {
+        echo "Computador Ligado!" . "\n";
+    }
+
+    function desligar()
+    {
+        echo "Computador Desligado!" . "\n";
+    }
+
+    function mostrarImagem()
+    {
+        echo "Computador Mostrando Imagem com a resolução " . $this->resolucao . "!" . "\n";
     }
 }
 
-$obMonitor = new Monitor();
-$obMonitor->cor = "Azul";
-$obMonitor->resolucao = "Ruim";
-$obMonitor->marca = "Mayara";
-$obMonitor->ligar();
-$obMonitor->desligar();
-$obMonitor->mostrarImagem();
-echo "Cor do monitor1 ". $obMonitor->cor;
-$obMonitor2 = new Monitor();
-$obMonitor2->cor = "Roxo";
-$obMonitor2->resolucao = "Maromeno";
-$obMonitor2->marca = "helo";
-$obMonitor2->ligar();
-$obMonitor2->desligar();
-$obMonitor2->mostrarImagem();
+// Programa Principal //
+
+$monitor1 = new Monitor();
+$monitor1->cor = "Preto";
+$monitor1->resolucao = "1080x1929";
+$monitor1->marca = "AOC";
+
+$monitor1->ligar();
+$monitor1->desligar();
+$monitor1->mostrarImagem();
+
+echo "Cor do Monitor 1: " . $monitor1->cor . "\n";
+
+$monitor2 = new Monitor();
+$monitor2->cor = "Azul";
+$monitor2->resolucao = "1080x1920";
+$monitor2->marca = "ACE";
+
+$monitor2->ligar();
+$monitor2->desligar();
+$monitor2->mostrarImagem();
+
+echo "Cor do Monitor 2: " . $monitor2->cor . "\n";
