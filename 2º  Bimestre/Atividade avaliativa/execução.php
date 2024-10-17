@@ -6,11 +6,11 @@ require_once("modelo/Prato.php");
 $pedidoArray = array();
 
 $pratoArray = array (
-    new Prato(1, "Camarão a Milanesa" , 110.00),
-    new Prato(2, "Pizza Margherita" , 80.00),
-    new Prato(3, "Macarrão a Carbonara" , 60.00),
-    new Prato(4, "Bife a Parmegiana" , 75.00),
-    new Prato(5, "Risoto ao Funghi" , 70.00),
+    new Prato(1, "Bife a Milanesa" , 110.00),
+    new Prato(2, "Pizza de Pepperoni" , 80.00),
+    new Prato(3, "Macarrão a Carbonara" , 75.00),
+    new Prato(4, "Frango a Parmegiana" , 80.00),
+    new Prato(5, "Risoto" , 90.00),
 );
 
 function retornaPrato ($pratoArray, $numero) {
